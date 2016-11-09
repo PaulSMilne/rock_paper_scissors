@@ -12,10 +12,10 @@ public class Game {
     private String mComputerMove;
     private String[] mPlays;
 
-    public Game(){
+    public Game(String playerMove){
         this.mPlays = new String[3];
         setUpPlays();
-        this.mPlayerMove = new String();
+        this.mPlayerMove = playerMove;
         this.mComputerMove = new String();
     }
 
@@ -25,14 +25,14 @@ public class Game {
         mPlays[2] = "scissors";
     }
 
-    public String computerMove() {
+    private void computerMove() {
         Random rand = new Random();
         int randomIndex = rand.nextInt(3);
         mComputerMove = mPlays[randomIndex];
-        return mComputerMove;
     }
 
     public String winChecker(){
+        computerMove();
         if (mPlayerMove == mComputerMove) {return "It's a tie!";}
          else if (
             mPlayerMove == "rock" && mComputerMove == "scissors" ||

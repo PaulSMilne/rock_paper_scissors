@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/instruction_text"
         android:textSize="30dp"
         android:layout_marginTop="50dp"
-        android:text=""
+        android:text="@string/instruction_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/rock_button"
-        android:text="Rock"
+        android:text="@string/rock_button"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
@@ -22,7 +23,7 @@
 
     <Button
         android:id="@+id/paper_button"
-        android:text="Paper"
+        android:text="@string/paper_button"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
@@ -30,7 +31,7 @@
 
     <Button
         android:id="@+id/scissors_button"
-        android:text="Scissors"
+        android:text="@string/scissors_button"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"

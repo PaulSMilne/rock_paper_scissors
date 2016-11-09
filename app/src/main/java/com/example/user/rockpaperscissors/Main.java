@@ -35,7 +35,10 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Main", "Rock button clicked");
-
+//
+                Game game = new Game("rock");
+                String resultText = game.winChecker();
+                mResultText.setText(resultText);
             }
         });
 
@@ -44,6 +47,9 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("Main", "Paper button clicked");
 
+                Game game = new Game("paper");
+                String resultText = game.winChecker();
+                mResultText.setText(resultText);
             }
         });
 
@@ -52,6 +58,9 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("Main", "Scissors button clicked");
 
+                Game game = new Game("scissors");
+                String resultText = game.winChecker();
+                mResultText.setText(resultText);
             }
         });
     }

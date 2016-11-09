@@ -20,9 +20,9 @@ public class Game {
     }
 
     public void setUpPlays(){
-        mPlays[0] = "Rock";
-        mPlays[1] = "Paper";
-        mPlays[2] = "Scissors";
+        mPlays[0] = "rock";
+        mPlays[1] = "paper";
+        mPlays[2] = "scissors";
     }
 
     public String computerMove() {
@@ -30,6 +30,16 @@ public class Game {
         int randomIndex = rand.nextInt(3);
         mComputerMove = mPlays[randomIndex];
         return mComputerMove;
+    }
+
+    public String winChecker(){
+        if (mPlayerMove == mComputerMove) {return "It's a tie!";}
+         else if (
+            mPlayerMove == "rock" && mComputerMove == "scissors" ||
+            mPlayerMove == "paper" && mComputerMove == "rock" ||
+            mPlayerMove == "scissors" && mComputerMove == "paper")
+        {return "You win!";}
+         else {return "Computer wins. Play again.";}
     }
 
 

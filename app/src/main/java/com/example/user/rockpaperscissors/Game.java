@@ -28,8 +28,8 @@ public class Game {
     public String computerMove() {
         Random rand = new Random();
         int randomIndex = rand.nextInt(3);
-        String result = mPlays[randomIndex];
-        return result;
+        mComputerMove = mPlays[randomIndex];
+        return mComputerMove;
     }
 
 
